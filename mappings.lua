@@ -1,5 +1,13 @@
 local M = {}
 M.genaral = {
+  n = {
+    ["<F5>"] = {
+      "<cmd> SetTransparency <CR>",
+      { noremap = true, silent = true },
+      "Reloading Background ..."
+    }
+  },
+
   i = {
     ["<C-c>"] = {
       "<Esc>",
