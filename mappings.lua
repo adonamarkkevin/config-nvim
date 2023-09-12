@@ -1,71 +1,71 @@
 local M = {}
 M.genaral = {
-  n = {
-    ["<F5>"] = {
-      "<cmd> SetTransparency <CR>",
-      { noremap = true, silent = true },
-      "Reloading Background ..."
-    }
-  },
+    n = {
+        ["<F5>"] = {
+            "<cmd> SetTransparency <CR>",
+            { noremap = true, silent = true },
+            "Reloading Background ..."
+        }
+    },
 
-  i = {
-    ["<C-c>"] = {
-      "<Esc>",
-      { noremap = true },
-      "Exiting Insert Mode"
+    i = {
+        ["<C-c>"] = {
+            "<Esc>",
+            { noremap = true },
+            "Exiting Insert Mode"
+        }
+    },
+    v = {
+        ["<C-c>"] = {
+            "<Esc>",
+            { noremap = true },
+            "Exiting Visual Mode"
+        }
     }
-  },
-  v = {
-    ["<C-c>"] = {
-      "<Esc>",
-      { noremap = true },
-      "Exiting Visual Mode"
-    }
-  }
 }
 M.dap = {
-  plugin = true,
-  n = {
-    ["<leader>db"] = {
-      "<cmd> DapToggleBreakpoint <CR>",
-      "Add breakpoint at line"
+    plugin = true,
+    n = {
+        ["<leader>db"] = {
+            "<cmd> DapToggleBreakpoint <CR>",
+            "Add breakpoint at line"
+        },
+        ["<leader>dr"] = {
+            "<cmd> DapContinue <CR>",
+            "Run or continue the debugger"
+        }
     },
-    ["<leader>dr"] = {
-      "<cmd> DapContinue <CR>",
-      "Run or continue the debugger"
-    }
-  },
 }
 M.dap_go = {
-  plugin = true,
-  n = {
-    ["<leader>dgt"] = {
-      function()
-        require('dap-go').debug_test()
-      end,
-      "Debug go test"
-    },
-    ["<leader>dgl"] = {
-      function()
-        require('dap-go').debug_last()
-      end,
-      "Debug last go test"
+    plugin = true,
+    n = {
+        ["<leader>dgt"] = {
+            function()
+                require('dap-go').debug_test()
+            end,
+            "Debug go test"
+        },
+        ["<leader>dgl"] = {
+            function()
+                require('dap-go').debug_last()
+            end,
+            "Debug last go test"
+        }
     }
-  }
 }
 
 M.gopher = {
-  plugin = true,
-  n = {
-    ["<leader>gsj"] = {
-      "<cmd> GoTagAdd json <CR>",
-      "Add json struct tags"
-    },
-    ["<leader>gsy"] = {
-      "<cmd> GoTagAdd yaml <CR>",
-      "Add yaml struct tags"
+    plugin = true,
+    n = {
+        ["<leader>gsj"] = {
+            "<cmd> GoTagAdd json <CR>",
+            "Add json struct tags"
+        },
+        ["<leader>gsy"] = {
+            "<cmd> GoTagAdd yaml <CR>",
+            "Add yaml struct tags"
+        }
     }
-  }
 }
 
 return M
