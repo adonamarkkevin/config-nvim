@@ -5,7 +5,13 @@ M.genaral = {
             "<cmd> SetTransparency <CR>",
             { noremap = true, silent = true },
             "Reloading Background ..."
-        }
+        },
+
+        ["<C-S-c>"] = {
+            ":w !xclip -selection clipboard<CR>",
+            { noremap = true, silent = true },
+            "Copying selection ..."
+        },
     },
 
     i = {
@@ -20,7 +26,12 @@ M.genaral = {
             "<Esc>",
             { noremap = true },
             "Exiting Visual Mode"
-        }
+        },
+        ["<C-S-c>"] = {
+            ":w !xclip -selection clipboard<CR>",
+            { noremap = true, silent = true },
+            "Copying selection ..."
+        },
     }
 }
 M.dap = {
